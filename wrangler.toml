@@ -2,6 +2,15 @@ name = "cloudflare-docker-proxy"
 workers_dev = true
 main = "src/index.js"
 compatibility_date = "2021-12-07"
+routes = [
+    { pattern = "docker.pinolly.top", custom_domain = true },
+    { pattern = "quay.pinolly.top", custom_domain = true },
+    { pattern = "gcr.pinolly.top", custom_domain = true },
+    { pattern = "k8s-gcr.pinolly.top", custom_domain = true },
+    { pattern = "k8s.pinolly.top", custom_domain = true },
+    { pattern = "ghcr.pinolly.top", custom_domain = true },
+    { pattern = "cloudsmith.pinolly.top", custom_domain = true },
+]
 
 [dev]
 ip = "0.0.0.0"
